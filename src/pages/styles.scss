@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    .wrapper {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0;
+
+        .header {
+            width: 100%;
+            height: 64px;
+            background-color: #c4cfd6;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+        }
+        .main {
+            width: 100%;            
+            display: flex;
+            flex-grow: 1;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+
+            .main-container {
+                margin-top: 24px;
+                background-color: #ebf0f3;
+                flex-grow: 1;
+                padding: 12px;
+                height: 100%;
+                overflow-y: scroll;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 48px;
+            }
+        }
+        .footer {
+            width: 100%;
+            background-color: #c4cfd6;
+            height: 64px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+
+            .controller {
+                padding: 0px 32px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+
+                input[type="number"] {
+                    border: 1px solid #ccc; // Add a border
+                    padding: 8px;
+                    border-radius: 4px;
+                    font-size: 16px;    
+                    // Apply some additional styles on hover
+                    &:hover {border-color: #3498db;}
+    
+                    // Apply styles when the input is focused
+                    &:focus {
+                        border-color: #2980b9;
+                        box-shadow: 0 0 5px rgba(52, 152, 219, 0.7);
+                    }
+                }
+            }
+
+            button {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #e708d5;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #470142;
+                }
+
+                &:active {
+                    background-color: #75116f;
+                }
+
+                &:disabled {
+                    background-color: #797979;
+                    cursor: not-allowed;
+                }
+            }
+
+            
+        }
+    }
+}
